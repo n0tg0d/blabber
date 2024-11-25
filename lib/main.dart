@@ -1,3 +1,5 @@
+import 'package:blabber/common/theme/dark_theme.dart';
+import 'package:blabber/common/theme/light_theme.dart';
 import 'package:blabber/feature/welcome/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Blabber',
-      theme: ThemeData.dark(),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
+      themeMode: ThemeMode.system,
       home: const Scaffold(
         body: WelcomePage(),
       ),
